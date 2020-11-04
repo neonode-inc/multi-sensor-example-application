@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['gesturesmode',['GesturesMode',['../zForceTypes_8h.html#ae5153f7ead1e096c50c082a1a750bd2daeb3e645bdee66a213b788f1cb38cf60f',1,'zForceTypes.h']]],
+  ['getaction',['GetAction',['../zForceTypes_8h.html#a86dd943254948f4ced6fa36afa1d8533a42642b5e49bd1cf44f84c403b7c09f97',1,'zForceTypes.h']]],
+  ['getdetectedobjectsizerestriction',['GetDetectedObjectSizeRestriction',['../structAirDevice.html#a119e562a76c1c5375f2a6428402304ed',1,'AirDevice::GetDetectedObjectSizeRestriction()'],['../structCoreDevice.html#a6f1257fbbcc38b3ca9421797c48817af',1,'CoreDevice::GetDetectedObjectSizeRestriction()']]],
+  ['getdisable',['GetDisable',['../structAirDevice.html#a78bdc10a1040a31254420fc209db00b1',1,'AirDevice::GetDisable()'],['../structCoreDevice.html#a42a38cd9f1f1a1f200892a5b2eaf7135',1,'CoreDevice::GetDisable()']]],
+  ['getenable',['GetEnable',['../structAirDevice.html#a14cbebf707e39e4beb6112651a4f971c',1,'AirDevice::GetEnable()'],['../structCoreDevice.html#ab3728d85743618d84deb79a692d6d65b',1,'CoreDevice::GetEnable()']]],
+  ['getflipxy',['GetFlipXY',['../structAirDevice.html#ab24308b5bcdf6b9c78c2975a354e7108',1,'AirDevice::GetFlipXY()'],['../structCoreDevice.html#a487f073edcf1c6e0ff1327a0dd071f6f',1,'CoreDevice::GetFlipXY()']]],
+  ['gethiddisplaysize',['GetHidDisplaySize',['../structAirDevice.html#a5c8776dcf41befee095f3f24891926f1',1,'AirDevice::GetHidDisplaySize()'],['../structCoreDevice.html#a2685fcbcbba06dd785928d73599c0887',1,'CoreDevice::GetHidDisplaySize()']]],
+  ['getmergetouches',['GetMergeTouches',['../structAirDevice.html#a24943e255418fa16d965451acc5b42d7',1,'AirDevice::GetMergeTouches()'],['../structCoreDevice.html#ad515d0752a44b979e1d6f51c7f4edeb1',1,'CoreDevice::GetMergeTouches()']]],
+  ['getnumberoftrackedobjects',['GetNumberOfTrackedObjects',['../structAirDevice.html#acf4fdde6323c8655d020ba193c75fad9',1,'AirDevice::GetNumberOfTrackedObjects()'],['../structCoreDevice.html#a71f3d4a58ec759490ece2dce92a017a6',1,'CoreDevice::GetNumberOfTrackedObjects()']]],
+  ['getoffset',['GetOffset',['../structAirDevice.html#a249886ad91482e3ee3277214443f157b',1,'AirDevice::GetOffset()'],['../structCoreDevice.html#a6666340d0dc034cec02e6af08de5ee8c',1,'CoreDevice::GetOffset()']]],
+  ['getoperationmodes',['GetOperationModes',['../structAirDevice.html#a7a25882152c9fb6cbc5d7f5639bf0655',1,'AirDevice::GetOperationModes()'],['../structCoreDevice.html#a7ea41017d831fa20e443be8d2034bdba',1,'CoreDevice::GetOperationModes()']]],
+  ['getreflectiveedgefilter',['GetReflectiveEdgeFilter',['../structAirDevice.html#a2cb0f4f0c8621a9379bbda01a8719624',1,'AirDevice::GetReflectiveEdgeFilter()'],['../structCoreDevice.html#a578261ad40c2ef0f33313eeb217e044c',1,'CoreDevice::GetReflectiveEdgeFilter()']]],
+  ['getresolution',['GetResolution',['../structAirDevice.html#a2ed6bdb78ebc353e1c9b74bc1816fbba',1,'AirDevice::GetResolution()'],['../structCoreDevice.html#a98f138c0b122487c57476fd2067c7d0d',1,'CoreDevice::GetResolution()']]],
+  ['getreversetouchactivearea',['GetReverseTouchActiveArea',['../structAirDevice.html#a868aa4b41e71cca286ad3bab1bbfc9d8',1,'AirDevice::GetReverseTouchActiveArea()'],['../structCoreDevice.html#ab4670457a1af8eaa173561dde108a671',1,'CoreDevice::GetReverseTouchActiveArea()']]],
+  ['gettimemilliseconds',['GetTimeMilliSeconds',['../structOsAbstractionLayer.html#a97ef8ca4f4bad5952311c3c48b3a43d4',1,'OsAbstractionLayer']]],
+  ['gettimeoutvalue',['GetTimeOutValue',['../structHidPipeTransport.html#a96e5ef920085a4becb21b0b6ea98d584',1,'HidPipeTransport::GetTimeOutValue()'],['../structSerialTransport.html#aee3a1ede25b51e3dd1797da5fbf9d374',1,'SerialTransport::GetTimeOutValue()'],['../structTransport.html#ae3a984f3dbc9fcfdd63050956f8bdb0f',1,'Transport::GetTimeOutValue()']]],
+  ['gettouchactivearea',['GetTouchActiveArea',['../structAirDevice.html#ab9ce530f7bf8d33b97e004a27e86f501',1,'AirDevice::GetTouchActiveArea()'],['../structCoreDevice.html#a3adf9cdd4b93277688533bd4f9b28497',1,'CoreDevice::GetTouchActiveArea()']]],
+  ['ghostevent',['GhostEvent',['../zForceTypes_8h.html#acfc03f378b3b2d16631fca0b23878fdaa0173f602277716d72a6a686337e09100',1,'zForceTypes.h']]]
+];

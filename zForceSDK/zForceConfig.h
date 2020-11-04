@@ -1,0 +1,52 @@
+/*
+ * This is an automatically generated file. DO NOT EDIT!
+ *
+ * COPYRIGHT NOTICE: (c) 2017-2018 Neonode Technologies AB. All rights reserved.
+ *
+ */
+#ifndef ZFORCECONFIG_H
+#define ZFORCECONFIG_H
+
+// Used by Transport and Protocol layers.
+#define TRANSPORTPROTOCOL_TableSize 10
+#define TRANSPORTPROTOCOL_OptionsSeparator "://"
+#define TRANSPORTPROTOCOL_MaxEntryNameLength 20
+#define TRANSPORTPROTOCOL_MinEntryNameLength 3
+#define TRANSPORTPROTOCOL_MaxOptionParameterLength 100
+
+// Used by Transport.
+/* #undef USE_SERIALTRANSPORT */
+#define USE_HIDPIPETRANSPORT true
+
+// Used by Protocol.
+#define USE_ASN1PROTOCOL true
+
+// Used by Device.
+#define USE_PLATFORMDEVICE true
+#define USE_SENSORDEVICE true
+#define USE_COREDEVICE true
+#define USE_AIRDEVICE true
+#define USE_PLUSDEVICE true
+#define USE_LIGHTINGDEVICE true
+
+// Used by Message.
+#define USE_ENABLEMESSAGE 1
+#define USE_DISABLEMESSAGE 1
+#define USE_OPERATIONMODESMESSAGE 1
+#define USE_RESOLUTIONMESSAGE 1
+#define USE_TOUCHACTIVEAREAMESSAGE 1
+#define USE_TOUCHMESSAGE 1
+#define USE_NUMBEROFTRACKEDOBJECTSMESSAGE 1
+#define USE_FINGERFREQUENCYMESSAGE 1
+#define USE_IDLEFREQUENCYMESSAGE 1
+#define USE_DETECTEDOBJECTSIZERESTRICTIONMESSAGE 1
+#define USE_REVERSETOUCHACTIVEAREAMESSAGE 1
+#define USE_MCUUNIQUEIDENTIFIERMESSAGE 1
+#define USE_OFFSETMESSAGE 1
+#define USE_HIDDISPLAYSIZEMESSAGE 1
+#define USE_FLIPXYMESSAGE 1
+#define USE_REFLECTIVEEDGEFILTERMESSAGE 1
+#define USE_MERGETOUCHESMESSAGE 1
+
+#endif // ZFORCECONFIG_H
+

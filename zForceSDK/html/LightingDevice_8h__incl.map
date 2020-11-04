@@ -1,0 +1,8 @@
+<map id="LightingDevice.h" name="LightingDevice.h">
+<area shape="rect" id="node2" href="$Device_8h.html" title="Base Device class. " alt="" coords="147,80,224,107"/>
+<area shape="rect" id="node3" href="$PlatformDevice_8h.html" title="Handles requests to the PlatformDevice. " alt="" coords="5,155,136,181"/>
+<area shape="rect" id="node4" href="$SensorDevice_8h.html" title="Handles requests to the SensorDevice, a meta device. " alt="" coords="227,229,349,256"/>
+<area shape="rect" id="node5" href="$CoreDevice_8h.html" title="Handles requests to the CoreDevice. " alt="" coords="235,155,341,181"/>
+<area shape="rect" id="node6" href="$AirDevice_8h.html" title="Handles requests to the AirDevice. " alt="" coords="366,155,461,181"/>
+<area shape="rect" id="node7" href="$PlusDevice_8h.html" title="Handles requests to the PlusDevice. " alt="" coords="485,155,587,181"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="CoreDevice" name="CoreDevice">
+<area shape="rect" id="node2" href="$structReverseTouchActiveArea.html" title="This structure represents whether the Touch Active Area coordinates are reversed or not..." alt="" coords="23,303,201,329"/>
+<area shape="rect" id="node3" href="$structCartesianCoordinates.html" title="Struct representing a coordinate. " alt="" coords="225,303,385,329"/>
+<area shape="rect" id="node4" href="$structzForce.html" title="Main struct. " alt="" coords="824,95,888,121"/>
+<area shape="rect" id="node7" href="$structDevice.html" title="Brief Device base class. " alt="" coords="682,184,747,211"/>
+<area shape="rect" id="node8" href="$structConnection.html" title="The main Connection struct. " alt="" coords="821,303,915,329"/>
+<area shape="rect" id="node9" href="$structTransport.html" title="Transport struct. This structure represents the base class of all Transport definitions. " alt="" coords="1066,643,1147,669"/>
+<area shape="rect" id="node11" href="$structQueue.html" title="The Queue struct. " alt="" coords="996,184,1060,211"/>
+<area shape="rect" id="node12" href="$structProtocol.html" title="This structure represents the base class of all protocol definitions. " alt="" coords="627,643,701,669"/>
+<area shape="rect" id="node5" href="$structOsAbstractionLayer.html" title="Overrides for OS Functions. " alt="" coords="783,5,929,32"/>
+<area shape="rect" id="node6" href="$structTouchActiveArea.html" title="This structure represents the Touch Active Area of a sensor. " alt="" coords="410,303,537,329"/>
+<area shape="rect" id="node10" href="$structDataFrame.html" title="Struct containing the DataFrame information. " alt="" coords="853,392,947,419"/>
+</map>
