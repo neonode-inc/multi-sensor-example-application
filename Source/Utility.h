@@ -34,6 +34,6 @@ uint32_t GetMillisecond(uint64_t timestamp);
 void PrintDateTimeFromUTC(uint64_t timestamp);
 
 /*  Converts the SDK touch event to an application event type.  */
-ApplicationEvent ConvertTouchEvent(TouchEvent event);
+ApplicationTouchEvent ConvertTouchEvent(TouchEvent event);
 
 #endif // UTILITY_H
