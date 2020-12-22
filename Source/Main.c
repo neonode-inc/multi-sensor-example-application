@@ -522,9 +522,10 @@ static void ProcessMessage(IndexedMessage * indexedMessage)
         {
             TouchMessage * touchMessage = (TouchMessage *)(indexedMessage->Message);
             TouchInfo info = {0};
+            ApplicationTouchEvent appEvent = ConvertTouchEvent(touchMessage->Event);
             CopyTouchInfo(&info, 
                             touchMessage->X, touchMessage->Y, 
-                            touchMessage->Event, indexedMessage->Timestamp, 
+                            appEvent, indexedMessage->Timestamp, 
                             indexedMessage->SensorConfiguration);
             if (verbose)
             {

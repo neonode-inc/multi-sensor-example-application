@@ -18,13 +18,13 @@ static const bool verbose = false;
 
 typedef enum ApplicationTouchEvent
 {
-    App_DownEvent,          //!< New Touch object detected.
-    App_MoveEvent,          //!< The Touch object is moving.
-    App_UpEvent,            //!< The Touch object is no longer detected.
-    App_UpPendingEvent,     //!< Pending state.
-    App_DownPendingEvent,   //!< Pending state.
-    App_InvalidEvent,       //!< Invalid Touch event reported by Device.
-    App_GhostEvent          //!< Ghost touch detected.
+    App_DownEvent,              //!< New Touch object detected.
+    App_MoveEvent,              //!< The Touch object is moving.
+    App_UpEvent,                //!< The Touch object is no longer detected.
+    App_InvalidEvent,           //!< Invalid Touch event reported by Device.
+    App_GhostEvent,             //!< Ghost touch detected.
+    App_DownPendingEvent = 20,  //!< Pending Down state.
+    App_UpPendingEvent = 21     //!< Pending Up state.
 } ApplicationTouchEvent;
 
 typedef enum SensorPosition
