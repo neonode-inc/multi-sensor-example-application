@@ -191,6 +191,9 @@ void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="st
 <tr class="memitem:a66fa9940dd8df20af19798c8cab82b10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDataFrame.html">DataFrame</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structProtocol.html#a66fa9940dd8df20af19798c8cab82b10">CreateHidDisplaySizeRequest</a> )(<a class="el" href="structProtocol.html">Protocol</a> *self, <a class="el" href="structDevice.html">Device</a> *device, <a class="el" href="zForceTypes_8h.html#a86dd943254948f4ced6fa36afa1d8533">MessageAction</a> action, uint32_t sizeX, bool sizeXIsValid, uint32_t sizeY, bool sizeYIsValid)</td></tr>
 <tr class="memdesc:a66fa9940dd8df20af19798c8cab82b10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a HidDisplaySize request.  <a href="#a66fa9940dd8df20af19798c8cab82b10">More...</a><br /></td></tr>
 <tr class="separator:a66fa9940dd8df20af19798c8cab82b10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80ab2f9f9f95f2821980372b14691e6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDataFrame.html">DataFrame</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structProtocol.html#a80ab2f9f9f95f2821980372b14691e6b">CreateTouchModeRequest</a> )(<a class="el" href="structProtocol.html">Protocol</a> *self, <a class="el" href="structDevice.html">Device</a> *device, <a class="el" href="zForceTypes_8h.html#a86dd943254948f4ced6fa36afa1d8533">MessageAction</a> action, <a class="el" href="zForceTypes_8h.html#a63c1436ffef543b6004f8e94d5ca5261">TouchModes</a> touchMode, bool touchModeIsValid, uint32_t clickOnTouchTime, bool clickOnTouchTimeIsValid, uint32_t clickOnTouchRadius, bool clickOnTouchRadiusIsValid)</td></tr>
+<tr class="memdesc:a80ab2f9f9f95f2821980372b14691e6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a TouchMode request.  <a href="#a80ab2f9f9f95f2821980372b14691e6b">More...</a><br /></td></tr>
+<tr class="separator:a80ab2f9f9f95f2821980372b14691e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This structure represents the base class of all protocol definitions. </p>
@@ -735,6 +738,39 @@ void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="st
     <tr><td class="paramname">lowerBoundaryY</td><td>Y axis value of lower boundary. </td></tr>
     <tr><td class="paramname">upperBoundaryX</td><td>X axis value of upper boundary. </td></tr>
     <tr><td class="paramname">upperBoundaryY</td><td>Y axis value of upper boundary.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to data frame if it it worked, NULL if it didn't. See errno. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a80ab2f9f9f95f2821980372b14691e6b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structDataFrame.html">DataFrame</a>*( *  Protocol::CreateTouchModeRequest) (<a class="el" href="structProtocol.html">Protocol</a> *self, <a class="el" href="structDevice.html">Device</a> *device, <a class="el" href="zForceTypes_8h.html#a86dd943254948f4ced6fa36afa1d8533">MessageAction</a> action, <a class="el" href="zForceTypes_8h.html#a63c1436ffef543b6004f8e94d5ca5261">TouchModes</a> touchMode, bool touchModeIsValid, uint32_t clickOnTouchTime, bool clickOnTouchTimeIsValid, uint32_t clickOnTouchRadius, bool clickOnTouchRadiusIsValid)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a TouchMode request. </p>
+<p>On error, errno is set.</p><ul>
+<li><a class="el" href="group__GenericErrors.html#ga37c279dfe120f74b8deb04e24b2f8ac8" title="Operation not supported. ">ENOTSUPPORTED</a> - Operation not supported.</li>
+<li><a class="el" href="group__ProtocolErrors.html#ga2985b3bc2ab4a15ae6033d89725f83a5" title="Generic protocol error. ">EPROTOCOLERROR</a> - Generic protocol error.</li>
+<li><a class="el" href="group__MemoryErrors.html#gaeaa55ac63225dd96b8f85f6c49118358" title="Out of memory. ">EOUTOFMEMORY</a> - Could not dynamically allocate memory.</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Pointer to the struct itself. </td></tr>
+    <tr><td class="paramname">device</td><td>Pointer to the <a class="el" href="structDevice.html" title="Brief Device base class. ">Device</a> from which the request originated. </td></tr>
+    <tr><td class="paramname">action</td><td>Indication of what type of action this message refers to. </td></tr>
+    <tr><td class="paramname">touchMode</td><td>Which Touch Mode the device is in. </td></tr>
+    <tr><td class="paramname">clickOnTouchTime</td><td>The Click on Touch Time. </td></tr>
+    <tr><td class="paramname">clickOnTouchTimeIsValid</td><td>The Click On Touch Time is valid, i.e. you want to set it. </td></tr>
+    <tr><td class="paramname">clickOnTouchRadius</td><td>The Click On Touch Radius. </td></tr>
+    <tr><td class="paramname">clickOnTouchRadiusIsValid</td><td>The Click on Touch Radius is valid, i.e. you want to set it.</td></tr>
   </table>
   </dd>
 </dl>

@@ -16,7 +16,7 @@ typedef enum TouchInfoKey
     TouchInfoEvent = 2,
     TouchInfoTimestamp = 3,
     TouchInfoSensorPosition = 4
-}TouchInfoKey;
+} TouchInfoKey;
 
 void HandleStateUpPending(void);
 void HandleStateReset(void);
@@ -401,7 +401,7 @@ IndexedMessage * MergeTouch(IndexedMessage * indexedMessage)
 void CopyTouchInfo(TouchInfo * dest, 
                     const uint32_t xInput,
                     const uint32_t yInput,
-                    const TouchEvent eventInput,
+                    const ApplicationTouchEvent eventInput,
                     const uint64_t timestampInput,
                     SensorConfiguration * configurationInput)
 {
@@ -584,25 +584,25 @@ TouchInfo * Debounce(TouchInfo *info)
 
     if (GetTimestampDiff(info, history) < DEBOUNCE_INTERVAL)
     {
-        if (info->Event == UpEvent && history->Event == DownEvent)
+        if (info->Event == App_UpEvent && history->Event == App_DownEvent)
         {
             if (verbose)
             {
                 printf("Debounce removed up event. \n");
             }
 
-            info->Event = MoveEvent;
+            info->Event = App_MoveEvent;
             TouchBufRewriteCurrent(info);
             return NULL;
         }
-        else if (info->Event == DownEvent && history->Event == UpEvent)
+        else if (info->Event == App_DownEvent && history->Event == App_UpEvent)
         {
             if (verbose)
             {
                 printf("Debounce removed down event. \n");
             }
 
-            info->Event = MoveEvent;
+            info->Event = App_MoveEvent;
             TouchBufRewriteCurrent(info);
             return NULL;
         }
@@ -620,7 +620,7 @@ TouchInfo * Debounce(TouchInfo *info)
 */
 TouchInfo * Deghost(TouchInfo *info)
 {
-    if (info->Event == UpEvent)
+    if (info->Event == App_UpEvent)
     {
         return info;
     }
@@ -670,7 +670,7 @@ TouchInfo * Deghost(TouchInfo *info)
                 printf("t0 %d, t-1 %d\n", GetMillisecond(info->Timestamp), GetMillisecond(history->Timestamp));
             }
         }
-        if (distance > 0 && info->Event != DownEvent)
+        if (distance > 0 && info->Event != App_DownEvent)
         {
             if (verbose)
             {
@@ -690,7 +690,7 @@ TouchInfo * Deghost(TouchInfo *info)
 TouchInfo * WeightedPosition(TouchInfo * info)
 {
     TouchInfo * history = FindHistoryBy(info, TouchInfoSensorPosition, SEARCH_UNMATCH);
-    if(history != NULL && history->Event != UpEvent)
+    if(history != NULL && history->Event != App_UpEvent)
     {
         if(verbose)
         {
@@ -718,7 +718,7 @@ TouchInfo * CoordinatesSmoother(TouchInfo * info)
     for(uint32_t i = 0; i < sampleSize - 1; i++)
     {
         TouchInfo * history = TouchBufPop();
-        if(history != NULL && (history->Event == MoveEvent || history->Event == DownEvent))
+        if(history != NULL && (history->Event == App_MoveEvent || history->Event == App_DownEvent))
         {
             samples++;
             xTotal += history->X;
@@ -963,9 +963,9 @@ TouchInfo * StateArbitrator(TouchInfo * info)
     {
         switch(global_sensor_state)
         {
-            case SensorStateDown: info->Event = DownEvent; break;
-            case SensorStateMove: info->Event = MoveEvent; break;
-            case SensorStateUp: info->Event = UpEvent; HandleStateReset(); break;
+            case SensorStateDown: info->Event = App_DownEvent; break;
+            case SensorStateMove: info->Event = App_MoveEvent; break;
+            case SensorStateUp: info->Event = App_UpEvent; HandleStateReset(); break;
             default: PrintStateArbitratorError(info); return NULL;
         }
         TouchBufRewriteCurrent(info); 
@@ -990,7 +990,7 @@ void TimeoutCallback()
 {
     global_sensor_state = SensorStateUp;
     TouchInfo * info = TouchBufPopLastWritten();
-    info->Event = UpEvent;
+    info->Event = App_UpEvent;
     TouchBufRewriteCurrent(info); 
     HandleStateReset();
 }
@@ -1004,9 +1004,9 @@ SensorState MapTouchstateToSensorstate(TouchInfo * info)
     SensorState state = SensorStateIdle;
     switch(info->Event)
     {
-        case DownEvent: state = SensorStateDown; break;
-        case MoveEvent: state = SensorStateMove; break;
-        case UpEvent: state = SensorStateUp; break;
+        case App_DownEvent: state = SensorStateDown; break;
+        case App_MoveEvent: state = SensorStateMove; break;
+        case App_UpEvent: state = SensorStateUp; break;
         default: break;
     }
     return state;
@@ -1070,36 +1070,36 @@ const char * GetSensorPositionName(SensorPosition sensorPosition)
 }
 
 /*  Gets a string describing the touch state.  */
-char * GetTouchStateName(TouchEvent event)
+char * GetTouchStateName(ApplicationTouchEvent event)
 {
     char         * eventString = NULL;
     switch (event)
     {
-        case DownEvent:
+        case App_DownEvent:
             eventString = "****";
         break;
 
-        case MoveEvent:
+        case App_MoveEvent:
             eventString = "....";
         break;
 
-        case UpEvent:
+        case App_UpEvent:
             eventString = "====";
         break;
 
-        case DownPendingEvent:
+        case App_DownPendingEvent:
             eventString = "**";
         break;
 
-        case UpPendingEvent:
+        case App_UpPendingEvent:
             eventString = "==";
         break;
 
-        case InvalidEvent:
+        case App_InvalidEvent:
             eventString = "Invalid";
         break;
 
-        case GhostEvent:
+        case App_GhostEvent:
             eventString = "Ghost";
         break;
 

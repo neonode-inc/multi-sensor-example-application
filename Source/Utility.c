@@ -136,3 +136,34 @@ uint32_t GetTimestampDiff(TouchInfo * info, TouchInfo * history)
 {
     return GetMillisecond(info->Timestamp) - GetMillisecond(history->Timestamp);
 }
+
+/*  Converts the SDK touch event to an application event type.  */
+ApplicationTouchEvent ConvertTouchEvent(TouchEvent event)
+{
+    ApplicationTouchEvent appEvent;
+
+    switch(event)
+    {
+        case DownEvent:
+            appEvent = App_DownEvent;
+        break;
+        case MoveEvent:
+            appEvent = App_MoveEvent;
+        break;
+        case UpEvent:
+            appEvent = App_UpEvent;
+        break;
+        case InvalidEvent:
+            appEvent = App_InvalidEvent;
+        break;
+        case GhostEvent:
+            appEvent = App_GhostEvent;
+        break;
+        default:
+            appEvent = App_InvalidEvent;
+            /* Unknown event */
+        break;
+    }
+
+    return appEvent;
+}

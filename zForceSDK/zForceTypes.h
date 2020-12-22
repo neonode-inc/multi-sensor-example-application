@@ -1,7 +1,7 @@
 /*! \file
  *
  * \copyright
- * COPYRIGHT NOTICE: (c) 2017 Neonode Technologies AB. All rights reserved.
+ * COPYRIGHT NOTICE: (c) 2017-2020 Neonode Technologies AB. All rights reserved.
  *
  */
 
@@ -77,6 +77,8 @@ typedef struct FlipXYMessage FlipXYMessage;
 typedef struct ReflectiveEdgeFilterMessage ReflectiveEdgeFilterMessage;
 //! \sa struct MergeTouchesMessage
 typedef struct MergeTouchesMessage MergeTouchesMessage;
+//! \sa struct TouchModeMessage
+typedef struct TouchModeMessage TouchModeMessage;
 
 //! Enum describing the different device types that exists.
 enum DeviceType
@@ -112,7 +114,8 @@ enum MessageType
     FlipXYMessageType,
     ReflectiveEdgeFilterMessageType,
     MergeTouchesMessageType,
-    HighestValidMessageType = MergeTouchesMessageType
+    TouchModeMessageType,
+    HighestValidMessageType = TouchModeMessageType
 };
 //! \sa enum MessageType
 typedef enum MessageType MessageType;
@@ -154,17 +157,14 @@ enum OperationModes
 //! \sa enum OperationModes
 typedef enum OperationModes OperationModes;
 
-
 //! Enum describing what state a touch can be in.
 enum TouchEvent
 {
-    DownEvent,          //!< New Touch object detected.
-    MoveEvent,          //!< The Touch object is moving.
-    UpEvent,            //!< The Touch object is no longer detected.
-    UpPendingEvent,     //!< Panding state.
-    DownPendingEvent,   //!< Panding state.
-    InvalidEvent,       //!< Invalid Touch event reported by Device.
-    GhostEvent          //!< Ghost touch detected.
+    DownEvent,    //!< New Touch object detected.
+    MoveEvent,    //!< The Touch object is moving.
+    UpEvent,      //!< The Touch object is no longer detected.
+    InvalidEvent, //!< Invalid Touch event reported by Device.
+    GhostEvent    //!< Ghost touch detected.
 };
 //! \sa enum TouchEvent
 typedef enum TouchEvent TouchEvent;
@@ -177,6 +177,15 @@ enum TouchOrientation
 };
 //! \sa enum TouchOrientation
 typedef enum TouchOrientation TouchOrientation;
+
+//! Enum describing what touch mode a device can be in.
+enum TouchModes
+{
+    NormalTouchMode,      //!< Touch Mode is set to Normal.
+    ClickOnTouchTouchMode //!< Touch Mode is set to Click on Touch.
+};
+//! \sa enum TouchModes
+typedef enum TouchModes TouchModes;
 
 //! \sa enum CartesianCoordinates
 typedef struct CartesianCoordinates CartesianCoordinates;

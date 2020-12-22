@@ -5,7 +5,7 @@
  * transports. Also handles queues to notify software about incoming messages.
  *
  * \copyright
- * COPYRIGHT NOTICE: (c) 2017-2018 Neonode Technologies AB. All rights reserved.
+ * COPYRIGHT NOTICE: (c) 2017-2020 Neonode Technologies AB. All rights reserved.
  *
  */
 
@@ -292,6 +292,27 @@ struct Connection
      * \brief Internal call to signal a Timeout.
      *
      * Internal call to signal a Timeout has occured on this Connection.
+     * \n\n
+     * On failure, errno is set.
+     * - ::ERECEIVETIMEOUT - Timeout received.
+     * - ::EENQUEUEFAILED - Generic enqueue error.
+     * - ::EOUTOFMEMORY - Memory allocation failed.
+     * - ::EBADQUEUE - Bad Queue Pointer.
+     * - ::EBADSEMAPHORE - Bad Semaphore pointer.
+     * - ::EBADMUTEX - Bad Mutex pointer.
+     * - ::EMUTEXNOTINITIALIZED - Mutex not initialized.
+     * - ::EMUTEXLOCKFAILED - Mutex Lock failed.
+     * - ::EMUTEXUNLOCKFAILED - Mutex Unlock failed.
+     *
+     * \param self Pointer to the struct itself.
+     *
+     * \return No return value.
+     */
+    void      ( * UnknownCommand)(Connection * self);
+    /*!
+     * \brief Internal call to signal an Unknown Command.
+     *
+     * Internal call to signal reception of Unknown Command on this Connection.
      * \n\n
      * On failure, errno is set.
      * - ::ERECEIVETIMEOUT - Timeout received.

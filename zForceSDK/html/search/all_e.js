@@ -17,5 +17,6 @@ var searchData=
   ['gettimemilliseconds',['GetTimeMilliSeconds',['../structOsAbstractionLayer.html#a97ef8ca4f4bad5952311c3c48b3a43d4',1,'OsAbstractionLayer']]],
   ['gettimeoutvalue',['GetTimeOutValue',['../structHidPipeTransport.html#a96e5ef920085a4becb21b0b6ea98d584',1,'HidPipeTransport::GetTimeOutValue()'],['../structSerialTransport.html#aee3a1ede25b51e3dd1797da5fbf9d374',1,'SerialTransport::GetTimeOutValue()'],['../structTransport.html#ae3a984f3dbc9fcfdd63050956f8bdb0f',1,'Transport::GetTimeOutValue()']]],
   ['gettouchactivearea',['GetTouchActiveArea',['../structAirDevice.html#ab9ce530f7bf8d33b97e004a27e86f501',1,'AirDevice::GetTouchActiveArea()'],['../structCoreDevice.html#a3adf9cdd4b93277688533bd4f9b28497',1,'CoreDevice::GetTouchActiveArea()']]],
+  ['gettouchmode',['GetTouchMode',['../structAirDevice.html#aa7914a605c0a32490b84a87ba63346fa',1,'AirDevice::GetTouchMode()'],['../structCoreDevice.html#a898e1c9a0d2e63db60641c98ad9fcfbb',1,'CoreDevice::GetTouchMode()']]],
   ['ghostevent',['GhostEvent',['../zForceTypes_8h.html#acfc03f378b3b2d16631fca0b23878fdaa0173f602277716d72a6a686337e09100',1,'zForceTypes.h']]]
 ];

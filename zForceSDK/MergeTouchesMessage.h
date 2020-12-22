@@ -1,7 +1,7 @@
 /*! \file
- * \brief A MergeTouchesMessage sets the mode for the device to handle all simultaneous touching 
+ * \brief A MergeTouchesMessage sets the mode for the device to handle all simultaneous touching
  * objects as one large object.
- * 
+ *
  * \copyright
  * COPYRIGHT NOTICE: (c) 2018 Neonode Technologies AB. All rights reserved.
  *
@@ -21,14 +21,14 @@
  */
 struct MergeTouchesMessage
 {
-#endif // !defined(MESSAGE_MERGETOUCHESMESSAGE_MERGETOUCHESMESSAGE_H) && !defined(CONTAINS_OPERATIONMODESMESSAGE)
-#if !defined(MESSAGE_MERGETOUCHESMESSAGE_MERGETOUCHESMESSAGE_H) || defined(CONTAINS_OPERATIONMODESMESSAGE)
+#endif // !defined(MESSAGE_MERGETOUCHESMESSAGE_MERGETOUCHESMESSAGE_H) && !defined(CONTAINS_MERGETOUCHESMESSAGE)
+#if !defined(MESSAGE_MERGETOUCHESMESSAGE_MERGETOUCHESMESSAGE_H) || defined(CONTAINS_MERGETOUCHESMESSAGE)
     #define CONTAINS_MESSAGE
     #include <Message.h>
     #undef CONTAINS_MESSAGE
     bool AreTouchesMerged; //!< Are touches merged?
-#endif // !defined(MESSAGE_MERGETOUCHESMESSAGE_MERGETOUCHESMESSAGE_H) || defined(CONTAINS_OPERATIONMODESMESSAGE)
-#if !defined(MESSAGE_MERGETOUCHESMESSAGE_MERGETOUCHESMESSAGE_H) && !defined(CONTAINS_OPERATIONMODESMESSAGE)
+#endif // !defined(MESSAGE_MERGETOUCHESMESSAGE_MERGETOUCHESMESSAGE_H) || defined(CONTAINS_MERGETOUCHESMESSAGE)
+#if !defined(MESSAGE_MERGETOUCHESMESSAGE_MERGETOUCHESMESSAGE_H) && !defined(CONTAINS_MERGETOUCHESMESSAGE)
 };
 
 #ifdef __cplusplus
@@ -58,4 +58,5 @@ DLLINTERNAL MergeTouchesMessage * MergeTouchesMessage_New (MessageGroup messageG
 #endif // __cplusplus
 
 #define MESSAGE_MERGETOUCHESMESSAGE_MERGETOUCHESMESSAGE_H
-#endif // !defined(MESSAGE_MERGETOUCHESMESSAGE_MERGETOUCHESMESSAGE_H) && !defined(CONTAINS_OPERATIONMODESMESSAGE)
+#endif // !defined(MESSAGE_MERGETOUCHESMESSAGE_MERGETOUCHESMESSAGE_H) && !defined(CONTAINS_MERGETOUCHESMESSAGE)
+

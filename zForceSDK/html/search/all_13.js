@@ -1,6 +1,7 @@
 var searchData=
 [
   ['nooperationmode',['NoOperationMode',['../zForceTypes_8h.html#ae5153f7ead1e096c50c082a1a750bd2da05e1a548148bb55668217dd04476c072',1,'zForceTypes.h']]],
+  ['normaltouchmode',['NormalTouchMode',['../zForceTypes_8h.html#a63c1436ffef543b6004f8e94d5ca5261a5ade5a829860d49f29344162c87c989d',1,'zForceTypes.h']]],
   ['notificationserialnumber',['NotificationSerialNumber',['../structAsn1Protocol.html#a21302803405c3701b56cf1b5e3d31e19',1,'Asn1Protocol::NotificationSerialNumber()'],['../structProtocol.html#a10d4b5aa5bab8d666bbacecf360e2210',1,'Protocol::NotificationSerialNumber()']]],
   ['numberofdevices',['NumberOfDevices',['../structConnection.html#ad518cf5848455d5c945aaee8a77c7d17',1,'Connection']]],
   ['numberofmessages',['NumberOfMessages',['../structEnableMessage.html#aeded279510bed74b52ec54c89d2af7ff',1,'EnableMessage']]],

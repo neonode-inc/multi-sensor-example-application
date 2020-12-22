@@ -1,5 +1,5 @@
 <map id="IdleFrequencyMessage.h" name="IdleFrequencyMessage.h">
-<area shape="rect" id="node2" href="$Message_8h.html" title="Base class for all Messages. " alt="" coords="1541,80,1631,107"/>
+<area shape="rect" id="node2" href="$Message_8h.html" title="Base class for all Messages. " alt="" coords="1647,80,1738,107"/>
 <area shape="rect" id="node3" href="$DetectedObjectSizeRestrictionMessage_8h.html" title="A DetectedObjectSizeRestrictionMessage contains Detected Object Size Restrictions of a Device..." alt="" coords="5,155,220,196"/>
 <area shape="rect" id="node4" href="$DisableMessage_8h.html" title="A DisableMessage that disables a Device. " alt="" coords="245,162,383,189"/>
 <area shape="rect" id="node5" href="$EnableMessage_8h.html" title="An EnableMessage that enables a Device. " alt="" coords="408,162,543,189"/>
@@ -16,4 +16,5 @@
 <area shape="rect" id="node16" href="$ReverseTouchActiveAreaMessage_8h.html" title="A ReverseTouchActiveAreaMessage contains the Touch Active Area of a Device. " alt="" coords="2644,162,2891,189"/>
 <area shape="rect" id="node17" href="$OffsetMessage_8h.html" title="An OffsetMessage that contains the Offset a Device is set to. " alt="" coords="2915,162,3044,189"/>
 <area shape="rect" id="node18" href="$ReflectiveEdgeFilterMessage_8h.html" title="A ReflectiveEdgeFilterMessage contains the modes the Device is set to. " alt="" coords="3069,162,3282,189"/>
+<area shape="rect" id="node19" href="$TouchModeMessage_8h.html" title="A TouchModeMessage sets the touch mode for the device. " alt="" coords="3306,162,3469,189"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="DisableMessage.h" name="DisableMessage.h">
-<area shape="rect" id="node2" href="$Message_8h.html" title="Base class for all Messages. " alt="" coords="1586,80,1677,107"/>
+<area shape="rect" id="node2" href="$Message_8h.html" title="Base class for all Messages. " alt="" coords="1697,80,1787,107"/>
 <area shape="rect" id="node3" href="$EnableMessage_8h.html" title="An EnableMessage that enables a Device. " alt="" coords="5,162,140,189"/>
 <area shape="rect" id="node4" href="$OperationModesMessage_8h.html" title="An OperationModesMessage contains the modes the Device is set to. " alt="" coords="164,162,360,189"/>
 <area shape="rect" id="node5" href="$ResolutionMessage_8h.html" title="A ResolutionMessage that contains the Resolution a Device is set to. " alt="" coords="384,162,540,189"/>
@@ -16,5 +16,6 @@
 <area shape="rect" id="node17" href="$FlipXYMessage_8h.html" title="A FlipXYMessage that contains a bool for wether the axes are flipped or not. " alt="" coords="2748,162,2875,189"/>
 <area shape="rect" id="node18" href="$ReflectiveEdgeFilterMessage_8h.html" title="A ReflectiveEdgeFilterMessage contains the modes the Device is set to. " alt="" coords="2899,162,3113,189"/>
 <area shape="rect" id="node19" href="$MergeTouchesMessage_8h.html" title="A MergeTouchesMessage sets the mode for the device to handle all simultaneous touching objects as one..." alt="" coords="3137,162,3320,189"/>
+<area shape="rect" id="node20" href="$TouchModeMessage_8h.html" title="A TouchModeMessage sets the touch mode for the device. " alt="" coords="3345,162,3507,189"/>
 <area shape="rect" id="node6" href="$zForceTypes_8h.html" title="zForceTypes.h" alt="" coords="699,244,809,271"/>
 </map>

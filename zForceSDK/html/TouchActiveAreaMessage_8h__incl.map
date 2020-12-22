@@ -17,4 +17,5 @@
 <area shape="rect" id="node17" href="$FlipXYMessage_8h.html" title="A FlipXYMessage that contains a bool for wether the axes are flipped or not. " alt="" coords="2692,162,2819,189"/>
 <area shape="rect" id="node18" href="$ReflectiveEdgeFilterMessage_8h.html" title="A ReflectiveEdgeFilterMessage contains the modes the Device is set to. " alt="" coords="2843,162,3057,189"/>
 <area shape="rect" id="node19" href="$MergeTouchesMessage_8h.html" title="A MergeTouchesMessage sets the mode for the device to handle all simultaneous touching objects as one..." alt="" coords="3081,162,3264,189"/>
+<area shape="rect" id="node20" href="$TouchModeMessage_8h.html" title="A TouchModeMessage sets the touch mode for the device. " alt="" coords="3289,162,3451,189"/>
 </map>

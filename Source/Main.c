@@ -522,9 +522,10 @@ static void ProcessMessage(IndexedMessage * indexedMessage)
         {
             TouchMessage * touchMessage = (TouchMessage *)(indexedMessage->Message);
             TouchInfo info = {0};
+            ApplicationTouchEvent appEvent = ConvertTouchEvent(touchMessage->Event);
             CopyTouchInfo(&info, 
                             touchMessage->X, touchMessage->Y, 
-                            touchMessage->Event, indexedMessage->Timestamp, 
+                            appEvent, indexedMessage->Timestamp, 
                             indexedMessage->SensorConfiguration);
             if (verbose)
             {
@@ -552,18 +553,18 @@ static void PrintTouchInfo(TouchInfo * info, int mode)
     }
     else if(mode == 1)
     {
-        if(info->Event == DownEvent)
+        if(info->Event == App_DownEvent)
         {
             printf("%d.%s%d \t",t/1000, (t%1000)<100?(t%1000)<10?"00":"0":"", t%1000);
             printf ("___/");
             fflush(stdout);
         }
-        else if(info->Event == MoveEvent)
+        else if(info->Event == App_MoveEvent)
         {
             printf ("-");
             fflush(stdout);
         }
-        else if(info->Event == UpEvent)
+        else if(info->Event == App_UpEvent)
         {
             printf ("\\___\n\n");
         }
@@ -589,8 +590,8 @@ static void SendToHostAsAbsoluteMouse(TouchInfo * info)
     uint8_t data[5] = {0};
     switch(info->Event)
     {
-        case DownEvent: data[0] = 1; break;     // button press
-        case MoveEvent: data[0] = 1; break;     // button press
+        case App_DownEvent: data[0] = 1; break;     // button press
+        case App_MoveEvent: data[0] = 1; break;     // button press
         default: data[0] = 0;                   // button release
     }
 

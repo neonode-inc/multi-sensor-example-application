@@ -139,6 +139,10 @@ DLLINTERNAL Message * Message_New (MessageGroup messageGroup, uint32_t size);
     #include <MergeTouchesMessage.h>
 #endif // defined(USE_MERGETOUCHESMESSAGE) || !defined (COMPILING_ZFORCE_SDK)
 
+#if defined(USE_TOUCHMODEMESSAGE) || !defined (COMPILING_ZFORCE_SDK)
+    #include <TouchModeMessage.h>
+#endif // defined(USE_TOUCHMODEMESSAGE) || !defined (COMPILING_ZFORCE_SDK)
+
 #define MESSAGE_MESSAGE_H
 #endif // !defined(MESSAGE_MESSAGE_H) && !defined(CONTAINS_MESSAGE)
 
