@@ -23,6 +23,7 @@ var searchData=
   ['setreversetouchactivearea',['SetReverseTouchActiveArea',['../structAirDevice.html#a03147a08823fdf3fb914e0556b8f6069',1,'AirDevice::SetReverseTouchActiveArea()'],['../structCoreDevice.html#a4fb875eebe905a7820dfbcc637c72112',1,'CoreDevice::SetReverseTouchActiveArea()']]],
   ['settimeout',['SetTimeout',['../structConnection.html#a070d87f1e990f9bff4648a393dc05d29',1,'Connection']]],
   ['settouchactivearea',['SetTouchActiveArea',['../structAirDevice.html#af3c398c176c163096495ef168ef3e419',1,'AirDevice::SetTouchActiveArea()'],['../structCoreDevice.html#a6c7867c25b7b384450f5c88337eae0df',1,'CoreDevice::SetTouchActiveArea()']]],
+  ['settouchmode',['SetTouchMode',['../structAirDevice.html#a9a1c38f30273594c7db315780d8faeea',1,'AirDevice::SetTouchMode()'],['../structCoreDevice.html#a85525d4b135fcfe1efee60763c85dc8b',1,'CoreDevice::SetTouchMode()']]],
   ['signalconnectionestablished',['SignalConnectionEstablished',['../structConnection.html#a810386e8ccf7e38f013826bdffe76884',1,'Connection']]],
   ['signalsmode',['SignalsMode',['../zForceTypes_8h.html#ae5153f7ead1e096c50c082a1a750bd2dabd4666410167011b5a6adaf48f6bbe00',1,'zForceTypes.h']]],
   ['sizex',['SizeX',['../structHidDisplaySizeMessage.html#acbd70dd66cee7c7ab066e4f05f0b174e',1,'HidDisplaySizeMessage']]],

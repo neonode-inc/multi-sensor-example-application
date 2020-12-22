@@ -2,7 +2,7 @@
  * \brief Implementation of Neonode's ASN.1 based protocol.
  *
  * \copyright
- * COPYRIGHT NOTICE: (c) 2017-2018 Neonode Technologies AB. All rights reserved.
+ * COPYRIGHT NOTICE: (c) 2017-2020 Neonode Technologies AB. All rights reserved.
  *
  */
 

@@ -6,7 +6,7 @@
  * the touch Sensor types, currently CoreDevice, AirDevice and PlusDevice.
  *
  * \copyright
- * COPYRIGHT NOTICE: (c) 2017-2018 Neonode Technologies AB. All rights reserved.
+ * COPYRIGHT NOTICE: (c) 2017-2020 Neonode Technologies AB. All rights reserved.
  *
  */
 
@@ -227,20 +227,20 @@ struct SensorDevice
      */
     bool ( * SetReverseTouchActiveArea)(SensorDevice * self, bool xIsReversed, bool yIsReversed);
 
-	/*!
-	* \brief Gets the current FlipXY setting.
-	*
-	* Gets the current FlipXY setting.
-	* \n\n
-	* On failure, errno is set.
-	* - ::EALREADYINPROGRESS - Another request is currently in progress.
-	* - ::ENOTSUPPORTED - This request is not supported by this protocol and/or Device.      
-	*
-	* \param self Pointer to the struct itself.
-	*
-	* \return True for success, false for failure. See errno.
-	*/
-	bool( * GetFlipXY)(SensorDevice * self);
+    /*!
+     * \brief Gets the current FlipXY setting.
+     *
+     * Gets the current FlipXY setting.
+     * \n\n
+     * On failure, errno is set.
+     * - ::EALREADYINPROGRESS - Another request is currently in progress.
+     * - ::ENOTSUPPORTED - This request is not supported by this protocol and/or Device.
+     *
+     * \param self Pointer to the struct itself.
+     *
+     * \return True for success, false for failure. See errno.
+     */
+    bool( * GetFlipXY)(SensorDevice * self);
 
     /*!
      * \brief Sets the FlipXY setting.
@@ -250,28 +250,28 @@ struct SensorDevice
      * On failure, errno is set.
      * - ::EALREADYINPROGRESS - Another request is currently in progress.
      * - ::ENOTSUPPORTED - This request is not supported by this protocol and/or Device.
-	 * - ::EINVALIDINPUT - Lower boundary input values must be lower than upper.
+     * - ::EINVALIDINPUT - Lower boundary input values must be lower than upper.
      *
      * \param self Pointer to the struct itself.
-	 * \param axesAreflipped True to flip the axes.
-	 *
+     * \param axesAreflipped True to flip the axes.
+     *
      * \return True for success, false for failure. See errno.
      */
     bool ( * SetFlipXY)(SensorDevice * self, bool axesAreFlipped);
 
-	/*!
-	* \brief Gets the current ReflectiveEdgeFilter setting.
-	*
-	* Gets the current ReflectiveEdgeFilter setting.
-	* \n\n
-	* On failure, errno is set.
-	* - ::EALREADYINPROGRESS - Another request is currently in progress.
-	* - ::ENOTSUPPORTED - This request is not supported by this protocol and/or Device.      
-	*
-	* \param self Pointer to the struct itself.
-	*
-	* \return True for success, false for failure. See errno.
-	*/
+    /*!
+     * \brief Gets the current ReflectiveEdgeFilter setting.
+     *
+     * Gets the current ReflectiveEdgeFilter setting.
+     * \n\n
+     * On failure, errno is set.
+     * - ::EALREADYINPROGRESS - Another request is currently in progress.
+     * - ::ENOTSUPPORTED - This request is not supported by this protocol and/or Device.
+     *
+     * \param self Pointer to the struct itself.
+     *
+     * \return True for success, false for failure. See errno.
+     */
     bool( * GetReflectiveEdgeFilter)(SensorDevice * self);
 
     /*!
@@ -282,28 +282,28 @@ struct SensorDevice
      * On failure, errno is set.
      * - ::EALREADYINPROGRESS - Another request is currently in progress.
      * - ::ENOTSUPPORTED - This request is not supported by this protocol and/or Device.
-	 * - ::EINVALIDINPUT - Lower boundary input values must be lower than upper.
+     * - ::EINVALIDINPUT - Lower boundary input values must be lower than upper.
      *
      * \param self Pointer to the struct itself.
-	 * \param isFilterOn is true if the filter is on, otherwise false.
-	 *
+     * \param isFilterOn is true if the filter is on, otherwise false.
+     *
      * \return True for success, false for failure. See errno.
      */
     bool ( * SetReflectiveEdgeFilter)(SensorDevice * self, bool isFilterOn);
 
-	/*!
-	* \brief Gets the current MergeTouches setting.
-	*
-	* Gets the current MergeTouches setting.
-	* \n\n
-	* On failure, errno is set.
-	* - ::EALREADYINPROGRESS - Another request is currently in progress.
-	* - ::ENOTSUPPORTED - This request is not supported by this protocol and/or Device.      
-	*
-	* \param self Pointer to the struct itself.
-	*
-	* \return True for success, false for failure. See errno.
-	*/
+    /*!
+     * \brief Gets the current MergeTouches setting.
+     *
+     * Gets the current MergeTouches setting.
+     * \n\n
+     * On failure, errno is set.
+     * - ::EALREADYINPROGRESS - Another request is currently in progress.
+     * - ::ENOTSUPPORTED - This request is not supported by this protocol and/or Device.
+     *
+     * \param self Pointer to the struct itself.
+     *
+     * \return True for success, false for failure. See errno.
+     */
     bool( * GetMergeTouches)(SensorDevice * self);
 
     /*!
@@ -314,11 +314,11 @@ struct SensorDevice
      * On failure, errno is set.
      * - ::EALREADYINPROGRESS - Another request is currently in progress.
      * - ::ENOTSUPPORTED - This request is not supported by this protocol and/or Device.
-	 * - ::EINVALIDINPUT - Lower boundary input values must be lower than upper.
+     * - ::EINVALIDINPUT - Lower boundary input values must be lower than upper.
      *
      * \param self Pointer to the struct itself.
-	 * \param areTouchesMerged is true if the touches are merged, otherwise false.
-	 *
+     * \param areTouchesMerged is true if the touches are merged, otherwise false.
+     *
      * \return True for success, false for failure. See errno.
      */
     bool ( * SetMergeTouches)(SensorDevice * self, bool areTouchesMerged);
@@ -378,7 +378,7 @@ struct SensorDevice
      * \return True for success, false for failure. See errno.
      */
     bool ( * GetDetectedObjectSizeRestriction)(SensorDevice * self);
-    
+
     /*!
      * \brief Set the current Detected Object Size Restriction of the Device.
      *
@@ -494,7 +494,7 @@ struct SensorDevice
     /*!
      * \brief Set the Hid Display Size.
      *
-     * Get the Hid Display Size.
+     * Set the Hid Display Size.
      * \n\n
      * On failure, errno is set.
      * - ::EALREADYINPROGRESS - Another request is currently in progress.
@@ -511,6 +511,46 @@ struct SensorDevice
      */
     bool ( * SetHidDisplaySize) (SensorDevice * self, uint32_t sizeX, bool sizeXIsValid,
                                                       uint32_t sizeY, bool sizeYIsValid);
+
+    /*!
+     * \brief Get the Touch Mode.
+     *
+     * Get the Touch Mode.
+     * \n\n
+     * On failure, errno is set.
+     * - ::EALREADYINPROGRESS - Another request is currently in progress.
+     * - ::ENOTSUPPORTED - This request is not supported by this protocol and/or
+     *                     Device.
+     *
+     * \param self Pointer to the struct itself.
+     *
+     * \return True for success, false for failure. See errno.
+     */
+    bool ( * GetTouchMode) (SensorDevice * self);
+
+    /*!
+     * \brief Set the Touch Mode.
+     *
+     * Set the Touch Mode.
+     * \n\n
+     * On failure, errno is set.
+     * - ::EALREADYINPROGRESS - Another request is currently in progress.
+     * - ::ENOTSUPPORTED - This request is not supported by this protocol and/or
+     *                     Device.
+     *
+     * \param self Pointer to the struct itself.
+     * \param touchMode Touch Mode to set.
+     * \param touchModeIsValid Touch Mode is valid, i.e. you want to set Touch Mode.
+     * \param clickOnTouchTime Click on Touch Time in ms.
+     * \param clickOnTouchTimeIsValid Click On Touch Time is valid, i.e. you want to set Click On Touch Time.
+     * \param clickOnTouchRadius Click on Touch Radius in ms.
+     * \param clickOnTouchRadiusIsValid Click On Touch Radius is valid, i.e. you want to set Click On Touch Radius.
+     *
+     * \return True for success, false for failure. See errno.
+     */
+    bool ( * SetTouchMode) (SensorDevice * self, TouchModes touchMode, bool touchModeIsValid,
+                                                 uint32_t clickOnTouchTime, bool clickOnTouchTimeIsValid,
+                                                 uint32_t clickOnTouchRadius, bool clickOnTouchRadiusIsValid);
 
 #endif // !defined(DEVICE_SENSORDEVICE_SENSORDEVICE_H) || defined(CONTAINS_SENSORDEVICE)
 #if !defined(DEVICE_SENSORDEVICE_SENSORDEVICE_H) && !defined(CONTAINS_SENSORDEVICE)

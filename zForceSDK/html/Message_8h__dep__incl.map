@@ -16,4 +16,5 @@
 <area shape="rect" id="node16" href="$ReverseTouchActiveAreaMessage_8h.html" title="A ReverseTouchActiveAreaMessage contains the Touch Active Area of a Device. " alt="" coords="2848,87,3095,114"/>
 <area shape="rect" id="node17" href="$OffsetMessage_8h.html" title="An OffsetMessage that contains the Offset a Device is set to. " alt="" coords="3119,87,3248,114"/>
 <area shape="rect" id="node18" href="$ReflectiveEdgeFilterMessage_8h.html" title="A ReflectiveEdgeFilterMessage contains the modes the Device is set to. " alt="" coords="3273,87,3486,114"/>
+<area shape="rect" id="node19" href="$TouchModeMessage_8h.html" title="A TouchModeMessage sets the touch mode for the device. " alt="" coords="3510,87,3673,114"/>
 </map>

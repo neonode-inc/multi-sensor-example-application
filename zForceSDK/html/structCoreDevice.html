@@ -234,6 +234,12 @@ void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="st
 <tr class="memitem:a430eea8a3c5c6075b41242051922f635"><td class="memItemLeft" align="right" valign="top">bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCoreDevice.html#a430eea8a3c5c6075b41242051922f635">SetHidDisplaySize</a> )(<a class="el" href="zForceTypes_8h.html#aaeebe30e34d837d8d3f113f156afb731">SensorDevice</a> *self, uint32_t sizeX, bool sizeXIsValid, uint32_t sizeY, bool sizeYIsValid)</td></tr>
 <tr class="memdesc:a430eea8a3c5c6075b41242051922f635"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Hid Display Size.  <a href="#a430eea8a3c5c6075b41242051922f635">More...</a><br /></td></tr>
 <tr class="separator:a430eea8a3c5c6075b41242051922f635"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a898e1c9a0d2e63db60641c98ad9fcfbb"><td class="memItemLeft" align="right" valign="top">bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCoreDevice.html#a898e1c9a0d2e63db60641c98ad9fcfbb">GetTouchMode</a> )(<a class="el" href="zForceTypes_8h.html#aaeebe30e34d837d8d3f113f156afb731">SensorDevice</a> *self)</td></tr>
+<tr class="memdesc:a898e1c9a0d2e63db60641c98ad9fcfbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Touch Mode.  <a href="#a898e1c9a0d2e63db60641c98ad9fcfbb">More...</a><br /></td></tr>
+<tr class="separator:a898e1c9a0d2e63db60641c98ad9fcfbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85525d4b135fcfe1efee60763c85dc8b"><td class="memItemLeft" align="right" valign="top">bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCoreDevice.html#a85525d4b135fcfe1efee60763c85dc8b">SetTouchMode</a> )(<a class="el" href="zForceTypes_8h.html#aaeebe30e34d837d8d3f113f156afb731">SensorDevice</a> *self, <a class="el" href="zForceTypes_8h.html#a63c1436ffef543b6004f8e94d5ca5261">TouchModes</a> touchMode, bool touchModeIsValid, uint32_t clickOnTouchTime, bool clickOnTouchTimeIsValid, uint32_t clickOnTouchRadius, bool clickOnTouchRadiusIsValid)</td></tr>
+<tr class="memdesc:a85525d4b135fcfe1efee60763c85dc8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Touch Mode.  <a href="#a85525d4b135fcfe1efee60763c85dc8b">More...</a><br /></td></tr>
+<tr class="separator:a85525d4b135fcfe1efee60763c85dc8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Struct representing a <a class="el" href="structCoreDevice.html" title="Struct representing a CoreDevice. ">CoreDevice</a>. </p>
@@ -625,6 +631,33 @@ On failure, errno is set.</p><ul>
 
 </div>
 </div>
+<a class="anchor" id="a898e1c9a0d2e63db60641c98ad9fcfbb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool( *  CoreDevice::GetTouchMode) (<a class="el" href="zForceTypes_8h.html#aaeebe30e34d837d8d3f113f156afb731">SensorDevice</a> *self)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the Touch Mode. </p>
+<p>Get the Touch Mode. <br />
+<br />
+On failure, errno is set.</p><ul>
+<li><a class="el" href="group__DeviceErrors.html#ga73195f1d8fe628243625227682c38685" title="Previous message in progress. ">EALREADYINPROGRESS</a> - Another request is currently in progress.</li>
+<li><a class="el" href="group__GenericErrors.html#ga37c279dfe120f74b8deb04e24b2f8ac8" title="Operation not supported. ">ENOTSUPPORTED</a> - This request is not supported by this protocol and/or <a class="el" href="structDevice.html" title="Brief Device base class. ">Device</a>.</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Pointer to the struct itself.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True for success, false for failure. See errno. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a909fe86d5fba70479e3fe701a1e7f1e2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -754,7 +787,7 @@ On failure, errno is set.</p><ul>
 </div><div class="memdoc">
 
 <p>Set the Hid Display Size. </p>
-<p>Get the Hid Display Size. <br />
+<p>Set the Hid Display Size. <br />
 <br />
 On failure, errno is set.</p><ul>
 <li><a class="el" href="group__DeviceErrors.html#ga73195f1d8fe628243625227682c38685" title="Previous message in progress. ">EALREADYINPROGRESS</a> - Another request is currently in progress.</li>
@@ -1011,6 +1044,39 @@ On failure, errno is set.</p><ul>
     <tr><td class="paramname">lowerBoundaryY</td><td>The lower boundary for the Y axis to set. </td></tr>
     <tr><td class="paramname">upperBoundaryY</td><td>The upper boundary for teh Y axis to set. </td></tr>
     <tr><td class="paramname">yIsValid</td><td>Set to true to change the values or false to ignore.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True for success, false for failure. See errno. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a85525d4b135fcfe1efee60763c85dc8b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool( *  CoreDevice::SetTouchMode) (<a class="el" href="zForceTypes_8h.html#aaeebe30e34d837d8d3f113f156afb731">SensorDevice</a> *self, <a class="el" href="zForceTypes_8h.html#a63c1436ffef543b6004f8e94d5ca5261">TouchModes</a> touchMode, bool touchModeIsValid, uint32_t clickOnTouchTime, bool clickOnTouchTimeIsValid, uint32_t clickOnTouchRadius, bool clickOnTouchRadiusIsValid)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the Touch Mode. </p>
+<p>Set the Touch Mode. <br />
+<br />
+On failure, errno is set.</p><ul>
+<li><a class="el" href="group__DeviceErrors.html#ga73195f1d8fe628243625227682c38685" title="Previous message in progress. ">EALREADYINPROGRESS</a> - Another request is currently in progress.</li>
+<li><a class="el" href="group__GenericErrors.html#ga37c279dfe120f74b8deb04e24b2f8ac8" title="Operation not supported. ">ENOTSUPPORTED</a> - This request is not supported by this protocol and/or <a class="el" href="structDevice.html" title="Brief Device base class. ">Device</a>.</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Pointer to the struct itself. </td></tr>
+    <tr><td class="paramname">touchMode</td><td>Touch Mode to set. </td></tr>
+    <tr><td class="paramname">touchModeIsValid</td><td>Touch Mode is valid, i.e. you want to set Touch Mode. </td></tr>
+    <tr><td class="paramname">clickOnTouchTime</td><td>Click on Touch Time in ms. </td></tr>
+    <tr><td class="paramname">clickOnTouchTimeIsValid</td><td>Click On Touch Time is valid, i.e. you want to set Click On Touch Time. </td></tr>
+    <tr><td class="paramname">clickOnTouchRadius</td><td>Click on Touch Radius in ms. </td></tr>
+    <tr><td class="paramname">clickOnTouchRadiusIsValid</td><td>Click On Touch Radius is valid, i.e. you want to set Click On Touch Radius.</td></tr>
   </table>
   </dd>
 </dl>

@@ -72,7 +72,7 @@ int TouchBufPush(TouchInfo * info);
 void CopyTouchInfo(TouchInfo * dest, 
                     const uint32_t xInput,
                     const uint32_t yInput,
-                    const TouchEvent eventInput,
+                    const ApplicationTouchEvent eventInput,
                     const uint64_t timestampInput,
                     SensorConfiguration * configurationInput);
 
@@ -89,6 +89,6 @@ void DumpTouchInfo(TouchInfo * info);
 const char * GetSensorPositionName(SensorPosition sensorPosition);
 
 /*  Gets a string describing the touch state.  */
-char * GetTouchStateName(TouchEvent event);
+char * GetTouchStateName(ApplicationTouchEvent event);
 
 #endif // MERGER_H

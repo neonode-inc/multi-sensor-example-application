@@ -2,6 +2,7 @@ var searchData=
 [
   ['cartesiancoordinates',['CartesianCoordinates',['../structCartesianCoordinates.html',1,'CartesianCoordinates'],['../zForceTypes_8h.html#a0473af8c13633523ce3a2b92506a629d',1,'CartesianCoordinates():&#160;zForceTypes.h']]],
   ['clearmessagefilter',['ClearMessageFilter',['../structConnection.html#a2bc236af2bb9a81e42b3733ddde25d6e',1,'Connection']]],
+  ['clickontouchtouchmode',['ClickOnTouchTouchMode',['../zForceTypes_8h.html#a63c1436ffef543b6004f8e94d5ca5261a55b2d7c95e6fc59e0d24aebfb2316f36',1,'zForceTypes.h']]],
   ['close',['Close',['../structHidPipeTransport.html#a40b49a1bff7113a970d60dccd13c8613',1,'HidPipeTransport::Close()'],['../structSerialTransport.html#a1d3dd9c02eb643ccf34ddc73f3d01a71',1,'SerialTransport::Close()'],['../structTransport.html#a9cba99a79f142fa54f3136d254c4bdfd',1,'Transport::Close()']]],
   ['connect',['Connect',['../structAsn1Protocol.html#ae4816aa0068af3871b977165d90ebe38',1,'Asn1Protocol::Connect()'],['../structConnection.html#a85431435335e910b64d2720be4a223e2',1,'Connection::Connect()'],['../structProtocol.html#ad4a427968a5da23036fddaca8fc74735',1,'Protocol::Connect()']]],
   ['connected',['Connected',['../Connection_8h.html#a94c42ef79c93cb9672927fc1e1be6525ad253364cc2926eb617b0833335fe4467',1,'Connection.h']]],
@@ -35,5 +36,6 @@ var searchData=
   ['createresolutionrequest',['CreateResolutionRequest',['../structAsn1Protocol.html#aa0c3bf7794ccc7fa40e4588aeeac1520',1,'Asn1Protocol::CreateResolutionRequest()'],['../structProtocol.html#a6a5efef3a6b43b1612cd9641d1ef3737',1,'Protocol::CreateResolutionRequest()']]],
   ['createreversetouchactivearearequest',['CreateReverseTouchActiveAreaRequest',['../structAsn1Protocol.html#a94631694d259085c73100568562ff5f9',1,'Asn1Protocol::CreateReverseTouchActiveAreaRequest()'],['../structProtocol.html#a2ea983147e53becfabcd2d85126ba7c8',1,'Protocol::CreateReverseTouchActiveAreaRequest()']]],
   ['createthread',['CreateThread',['../structOsAbstractionLayer.html#a3c3e2f1715270ce9bedfb4acf73d7f48',1,'OsAbstractionLayer']]],
-  ['createtouchactivearearequest',['CreateTouchActiveAreaRequest',['../structAsn1Protocol.html#af0a56c4c2d3f3298315de40da92dfe0a',1,'Asn1Protocol::CreateTouchActiveAreaRequest()'],['../structProtocol.html#afe2586f4546c273b6df365b0eb29195f',1,'Protocol::CreateTouchActiveAreaRequest()']]]
+  ['createtouchactivearearequest',['CreateTouchActiveAreaRequest',['../structAsn1Protocol.html#af0a56c4c2d3f3298315de40da92dfe0a',1,'Asn1Protocol::CreateTouchActiveAreaRequest()'],['../structProtocol.html#afe2586f4546c273b6df365b0eb29195f',1,'Protocol::CreateTouchActiveAreaRequest()']]],
+  ['createtouchmoderequest',['CreateTouchModeRequest',['../structAsn1Protocol.html#a958c9ecb9a373a733bc3b45963fa4d15',1,'Asn1Protocol::CreateTouchModeRequest()'],['../structProtocol.html#a80ab2f9f9f95f2821980372b14691e6b',1,'Protocol::CreateTouchModeRequest()']]]
 ];

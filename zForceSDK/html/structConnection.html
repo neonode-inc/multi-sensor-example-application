@@ -187,8 +187,11 @@ uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <tr class="memitem:aa710e3beb320b8e37d85c8af2d48335a"><td class="memItemLeft" align="right" valign="top">bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structConnection.html#aa710e3beb320b8e37d85c8af2d48335a">Disconnect</a> )(<a class="el" href="structConnection.html">Connection</a> *self)</td></tr>
 <tr class="memdesc:aa710e3beb320b8e37d85c8af2d48335a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnect from the unit.  <a href="#aa710e3beb320b8e37d85c8af2d48335a">More...</a><br /></td></tr>
 <tr class="separator:aa710e3beb320b8e37d85c8af2d48335a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab015786bc7cae4eaa84118959737e1e8"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structConnection.html#ab015786bc7cae4eaa84118959737e1e8">UnknownCommand</a> )(<a class="el" href="structConnection.html">Connection</a> *self)</td></tr>
+<tr class="memdesc:ab015786bc7cae4eaa84118959737e1e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal call to signal a Timeout.  <a href="#ab015786bc7cae4eaa84118959737e1e8">More...</a><br /></td></tr>
+<tr class="separator:ab015786bc7cae4eaa84118959737e1e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bcd91b6c9e2008ce569b0a3a4619088"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structConnection.html#a7bcd91b6c9e2008ce569b0a3a4619088">Timeout</a> )(<a class="el" href="structConnection.html">Connection</a> *self)</td></tr>
-<tr class="memdesc:a7bcd91b6c9e2008ce569b0a3a4619088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal call to signal a Timeout.  <a href="#a7bcd91b6c9e2008ce569b0a3a4619088">More...</a><br /></td></tr>
+<tr class="memdesc:a7bcd91b6c9e2008ce569b0a3a4619088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal call to signal an Unknown Command.  <a href="#a7bcd91b6c9e2008ce569b0a3a4619088">More...</a><br /></td></tr>
 <tr class="separator:a7bcd91b6c9e2008ce569b0a3a4619088"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a070d87f1e990f9bff4648a393dc05d29"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structConnection.html#a070d87f1e990f9bff4648a393dc05d29">SetTimeout</a> )(<a class="el" href="structConnection.html">Connection</a> *self, uint64_t relativeTimeoutMilliSeconds)</td></tr>
 <tr class="memdesc:a070d87f1e990f9bff4648a393dc05d29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal call to set the Timeout.  <a href="#a070d87f1e990f9bff4648a393dc05d29">More...</a><br /></td></tr>
@@ -595,6 +598,40 @@ On failure, errno is set.</p><ul>
       <table class="memname">
         <tr>
           <td class="memname">void( *  Connection::Timeout) (<a class="el" href="structConnection.html">Connection</a> *self)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Internal call to signal an Unknown Command. </p>
+<p>Internal call to signal reception of Unknown Command on this <a class="el" href="structConnection.html" title="The main Connection struct. ">Connection</a>. <br />
+<br />
+On failure, errno is set.</p><ul>
+<li><a class="el" href="group__ConnectionErrors.html#gaa509fcbb6f242b3827ab07f35a5a8f1c" title="Timeout receiving response. ">ERECEIVETIMEOUT</a> - Timeout received.</li>
+<li><a class="el" href="group__QueueErrors.html#ga3a6a9d0bdab49936fb32f8c667128131" title="Enqueue failed. ">EENQUEUEFAILED</a> - Generic enqueue error.</li>
+<li><a class="el" href="group__MemoryErrors.html#gaeaa55ac63225dd96b8f85f6c49118358" title="Out of memory. ">EOUTOFMEMORY</a> - Memory allocation failed.</li>
+<li><a class="el" href="group__QueueErrors.html#gaee128c55a438c10a2af62130dd84cb0e" title="Bad Queue Pointer. ">EBADQUEUE</a> - Bad <a class="el" href="structQueue.html" title="The Queue struct. ">Queue</a> Pointer.</li>
+<li><a class="el" href="group__MutexSemaphoreErrors.html#ga658269d56b063effcd11aa45c69c261c" title="Bad Semaphore Pointer. ">EBADSEMAPHORE</a> - Bad Semaphore pointer.</li>
+<li><a class="el" href="group__MutexSemaphoreErrors.html#ga4e7c5c9d80123d05258e27dcb96e6662" title="Bad Mutex Pointer. ">EBADMUTEX</a> - Bad Mutex pointer.</li>
+<li><a class="el" href="group__MutexSemaphoreErrors.html#ga5386dff4400ca81b82484404dfa694a4" title="Mutex not initialized. ">EMUTEXNOTINITIALIZED</a> - Mutex not initialized.</li>
+<li><a class="el" href="group__MutexSemaphoreErrors.html#ga69c6c0ba2db0f7f26e8526941c74a1d1" title="Mutex Lock failed. ">EMUTEXLOCKFAILED</a> - Mutex Lock failed.</li>
+<li><a class="el" href="group__MutexSemaphoreErrors.html#ga2affd9487f1e881879aa5d9bfdc0ea1b" title="Mutex Unlock failed. ">EMUTEXUNLOCKFAILED</a> - Mutex Unlock failed.</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Pointer to the struct itself.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>No return value. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab015786bc7cae4eaa84118959737e1e8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void( *  Connection::UnknownCommand) (<a class="el" href="structConnection.html">Connection</a> *self)</td>
         </tr>
       </table>
 </div><div class="memdoc">

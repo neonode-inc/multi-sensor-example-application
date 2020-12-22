@@ -229,7 +229,7 @@ struct Protocol
     * \return Pointer to data frame if it it worked,
     *         NULL if it didn't. See errno.
     */
-    DataFrame * ( * CreateReflectiveEdgeFilterRequest) (Protocol * self, Device * device, MessageAction action, 
+    DataFrame * ( * CreateReflectiveEdgeFilterRequest) (Protocol * self, Device * device, MessageAction action,
                                                                                                     bool isFilterOn);
 
     /*!
@@ -248,7 +248,7 @@ struct Protocol
     * \return Pointer to data frame if it it worked,
     *         NULL if it didn't. See errno.
     */
-    DataFrame * ( * CreateMergeTouchesRequest) (Protocol * self, Device * device, MessageAction action, 
+    DataFrame * ( * CreateMergeTouchesRequest) (Protocol * self, Device * device, MessageAction action,
                                                                                                 bool areTouchesMerged);
 
     /*!
@@ -488,6 +488,31 @@ struct Protocol
     DataFrame * ( * CreateHidDisplaySizeRequest) (Protocol * self, Device * device, MessageAction action,
                                                                    uint32_t sizeX, bool sizeXIsValid,
                                                                    uint32_t sizeY, bool sizeYIsValid);
+
+    /*!
+     * \brief Create a TouchMode request.
+     *
+     * On error, errno is set.
+     * - ::ENOTSUPPORTED - Operation not supported.
+     * - ::EPROTOCOLERROR - Generic protocol error.
+     * - ::EOUTOFMEMORY - Could not dynamically allocate memory.
+     *
+     * \param self Pointer to the struct itself.
+     * \param device Pointer to the Device from which the request originated.
+     * \param action Indication of what type of action this message refers to.
+     * \param touchMode Which Touch Mode the device is in.
+     * \param clickOnTouchTime The Click on Touch Time.
+     * \param clickOnTouchTimeIsValid The Click On Touch Time is valid, i.e. you want to set it.
+     * \param clickOnTouchRadius The Click On Touch Radius.
+     * \param clickOnTouchRadiusIsValid The Click on Touch Radius is valid, i.e. you want to set it.
+     *
+     * \return Pointer to data frame if it it worked,
+     *         NULL if it didn't. See errno.
+     */
+    DataFrame * ( * CreateTouchModeRequest) (Protocol * self, Device * device, MessageAction action,
+                                                           TouchModes touchMode, bool touchModeIsValid,
+                                                           uint32_t clickOnTouchTime, bool clickOnTouchTimeIsValid,
+                                                           uint32_t clickOnTouchRadius, bool clickOnTouchRadiusIsValid);
 
 #endif // !defined(PROTOCOL_PROTOCOL_H) || defined(CONTAINS_PROTOCOL)
 #if !defined(PROTOCOL_PROTOCOL_H) && !defined(CONTAINS_PROTOCOL)

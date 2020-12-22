@@ -16,13 +16,13 @@
 /*!
  * \brief This structure represents a operation mode message.
  *
- * This structure represents a message that turns on a filter that 
- * reduces the chance of ghost touches if there is highly reflective 
+ * This structure represents a message that turns on a filter that
+ * reduces the chance of ghost touches if there is highly reflective
  * surface outside of the touch active area.
  */
 struct ReflectiveEdgeFilterMessage
 {
-#endif // !defined(MESSAGE_REFLECTIVEEDGEFILTERMESSAGE_REFLECTIVEEDGEFILTERMESSAGE_H) && 
+#endif // !defined(MESSAGE_REFLECTIVEEDGEFILTERMESSAGE_REFLECTIVEEDGEFILTERMESSAGE_H) &&
 //        !defined(CONTAINS_REFLECTIVEEDGEFILTERMESSAGE)
 #if !defined(MESSAGE_REFLECTIVEEDGEFILTERMESSAGE_REFLECTIVEEDGEFILTERMESSAGE_H) || \
     defined(CONTAINS_REFLECTIVEEDGEFILTERMESSAGE)
@@ -30,7 +30,7 @@ struct ReflectiveEdgeFilterMessage
     #include <Message.h>
     #undef CONTAINS_MESSAGE
     bool FilterIsOn; //!< Is the filter on?
-#endif // !defined(MESSAGE_REFLECTIVEEDGEFILTERMESSAGE_REFLECTIVEEDGEFILTERMESSAGE_H) || 
+#endif // !defined(MESSAGE_REFLECTIVEEDGEFILTERMESSAGE_REFLECTIVEEDGEFILTERMESSAGE_H) ||
 //         defined(CONTAINS_REFLECTIVEEDGEFILTERMESSAGE)
 #if !defined(MESSAGE_REFLECTIVEEDGEFILTERMESSAGE_REFLECTIVEEDGEFILTERMESSAGE_H) && \
     !defined(CONTAINS_REFLECTIVEEDGEFILTERMESSAGE)

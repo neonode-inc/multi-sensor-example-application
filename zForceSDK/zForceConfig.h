@@ -1,7 +1,7 @@
 /*
  * This is an automatically generated file. DO NOT EDIT!
  *
- * COPYRIGHT NOTICE: (c) 2017-2018 Neonode Technologies AB. All rights reserved.
+ * COPYRIGHT NOTICE: (c) 2017-2020 Neonode Technologies AB. All rights reserved.
  *
  */
 #ifndef ZFORCECONFIG_H
@@ -47,6 +47,7 @@
 #define USE_FLIPXYMESSAGE 1
 #define USE_REFLECTIVEEDGEFILTERMESSAGE 1
 #define USE_MERGETOUCHESMESSAGE 1
+#define USE_TOUCHMODEMESSAGE 1
 
 #endif // ZFORCECONFIG_H
 

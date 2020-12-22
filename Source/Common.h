@@ -16,6 +16,17 @@ static const int32_t hostScreenHeight = 3000;   // Height of the screen which th
 
 static const bool verbose = false;
 
+typedef enum ApplicationTouchEvent
+{
+    App_DownEvent,          //!< New Touch object detected.
+    App_MoveEvent,          //!< The Touch object is moving.
+    App_UpEvent,            //!< The Touch object is no longer detected.
+    App_UpPendingEvent,     //!< Pending state.
+    App_DownPendingEvent,   //!< Pending state.
+    App_InvalidEvent,       //!< Invalid Touch event reported by Device.
+    App_GhostEvent          //!< Ghost touch detected.
+} ApplicationTouchEvent;
+
 typedef enum SensorPosition
 {
     SensorPositionTopLeft = 0,
@@ -36,7 +47,7 @@ typedef struct TouchInfo
 {
     uint32_t              X;
     uint32_t              Y;
-    TouchEvent            Event;
+    ApplicationTouchEvent Event;
     uint64_t              Timestamp;
     SensorConfiguration * SensorConfiguration;
 } TouchInfo;
